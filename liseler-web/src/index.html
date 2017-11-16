@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Türkiye Liseler Haritası</title>
+  <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.publicPath %>/favicon.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="description" content="Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak mahalli sistem için fikir vermesi adına geliştirilmiştir.">
+  <meta property="og:description" content="Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak mahalli sistem için fikir vermesi adına geliştirilmiştir.">
+  <meta property="og:title" content="Türkiye Liseler Haritası">
+  <meta property="og:image" content="https://alpcanaydin.github.io/liseler/social.png">
+  <meta property="og:url" content="https://alpcanaydin.github.io/liseler">
+  <meta property="og:site_name" content="Türkiye Liseler Haritası">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://alpcanaydin.github.io/liseler">
+  <meta name="twitter:title" content="Türkiye Liseler Haritası">
+  <meta property="twitter:image" content="https://alpcanaydin.github.io/liseler/social.png">
+  <meta name="twitter:description" content="Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak mahalli sistem için fikir vermesi adına geliştirilmiştir.">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+</head>
+
+<body>
+  <div class="container-fluid h-100">
+    <div class="d-sm-none d-md-none d-lg-none d-xl-none portrait-warning">
+      Lütfen telefonunuzu yan çevirin
+    </div>
+    <div class="row h-100">
+      <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 p-0">
+        <div id="sidebar">
+          <div id="logo" class="text-uppercase">
+            <div class="container">
+              Türkiye
+              <br /> Liseler Haritası
+            </div>
+          </div>
+          <div class="content">
+            <div class="container">
+              <p class="d-none d-lg-block">Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak
+                <strong>mahalli sistem</strong> için fikir vermesi adına geliştirilmiştir.</p>
+
+              <div class="high-school-types mt-5-md">
+                <div class="container">
+                  <div>
+                    <a href="#" data-type="fen_lisesi" class="high-school-type">
+                      <span>
+                        <img src="img/fen_lisesi.svg" width="32" height="32" />
+                      </span>
+                      Fen Lisesi
+                    </a>
+                    <a href="#" data-type="anadolu_lisesi" class="high-school-type">
+                      <span>
+                        <img src="img/anadolu_lisesi.svg" width="32" height="32" />
+                      </span>
+                      Anadolu Lisesi
+                    </a>
+                    <a href="#" data-type="meslek_lisesi" class="high-school-type">
+                      <span>
+                        <img src="img/meslek_lisesi.svg" width="32" height="32" />
+                      </span>
+                      Meslek Lisesi
+                    </a>
+                    <a href="#" data-type="imam_hatip" class="high-school-type">
+                      <span>
+                        <img src="img/imam_hatip_lisesi.svg" width="32" height="32" />
+                      </span>
+                      İmam Hatip Lisesi
+                    </a>
+                    <a href="#" data-type="lise" class="high-school-type">
+                      <span>
+                        <img src="img/diger_liseler.svg" width="32" height="32" />
+                      </span>
+                      Diğer Liseler
+                    </a>
+                  </div>
+
+                  <div class="show-all-high-schools-container">
+                    <hr class="show-all-high-schools-separator" />
+                    <div class="text-center">
+                      <a href="#" id="show-all-high-schools">Tümünü Göster</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button id="nearHighSchools" class="button button-primary d-none d-lg-block">Yakınımdaki Okulları Bul</button>
+            </div>
+          </div>
+          <div class="credits text-center">
+            <a href="https://twitter.com/alpcanaydin" target="_blank">@alpcanaydin</a>
+            -
+            <a href="https://twitter.com/batuhankrskl" target="_blank">@batuhankrskl</a>
+            <span class="d-none d-lg-inline-block">
+              -
+              <a href="https://github.com/alpcanaydin/liseler" target="_blank">kaynağı görüntüle</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 h-100 p-0 position-relative">
+        <div id="loading">Yükleniyor..</div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO1egUDZrGb2_qzNQQDa9pmIc4GRXQHOM"></script>
+</body>
+
+</html>

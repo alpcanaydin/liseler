@@ -1,0 +1,27 @@
+/** Bold */
+@font-face {
+  font-family: 'SF Text';
+  font-weight: 700;
+  src: url('../fonts/SF-UI-Text-Bold.otf');
+}
+
+/** Heavy */
+@font-face {
+  font-family: 'SF Text';
+  font-weight: 800;
+  src: url('../fonts/SF-UI-Text-Heavy.otf');
+}
+
+/** Medium */
+@font-face {
+  font-family: 'SF Text';
+  font-weight: 500;
+  src: url('../fonts/SF-UI-Text-Medium.otf');
+}
+
+/** Regular */
+@font-face {
+  font-family: 'SF Text';
+  font-weight: 400;
+  src: url('../fonts/SF-UI-Text-Regular.otf');
+}
