@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Türkiye Liseler Haritası</title>
+  <link rel="shortcut icon" href="https://alpcanaydin.github.io/liseler/favicon.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="description" content="Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak mahalli sistem için fikir vermesi adına geliştirilmiştir.">
+  <meta property="og:description" content="Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak mahalli sistem için fikir vermesi adına geliştirilmiştir.">
+  <meta property="og:title" content="Türkiye Liseler Haritası">
+  <meta property="og:image" content="https://alpcanaydin.github.io/liseler/social.png">
+  <meta property="og:url" content="https://alpcanaydin.github.io/liseler">
+  <meta property="og:site_name" content="Türkiye Liseler Haritası">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://alpcanaydin.github.io/liseler">
+  <meta name="twitter:title" content="Türkiye Liseler Haritası">
+  <meta property="twitter:image" content="https://alpcanaydin.github.io/liseler/social.png">
+  <meta name="twitter:description" content="Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak mahalli sistem için fikir vermesi adına geliştirilmiştir.">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109767800-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109767800-1');
+  </script>
+
+<link href="https://alpcanaydin.github.io/liseler/app.e763dfca.css" rel="stylesheet"></head>
+
+<body>
+  <div class="container-fluid h-100">
+    <div class="d-sm-none d-md-none d-lg-none d-xl-none portrait-warning">
+      Lütfen telefonunuzu yan çevirin
+    </div>
+    <div class="row h-100">
+      <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 p-0">
+        <div id="sidebar">
+          <div id="logo" class="text-uppercase">
+            <div class="container">
+              Türkiye
+              <br /> Liseler Haritası
+            </div>
+          </div>
+          <div class="content">
+            <div class="container">
+              <p class="d-none d-lg-block">Bu uygulama, Türkiye üzerinde bulunan liseleri konumlarına göre listeler. Yeni uygulanacak
+                <strong>mahalli sistem</strong> için fikir vermesi adına geliştirilmiştir.</p>
+
+              <div class="high-school-types mt-5-md">
+                <div class="container">
+                  <div>
+                    <a href="#" data-type="fen_lisesi" class="high-school-type">
+                      <span>
+                        <img src="img/fen_lisesi.svg" width="32" height="32" />
+                      </span>
+                      Fen Lisesi
+                    </a>
+                    <a href="#" data-type="anadolu_lisesi" class="high-school-type">
+                      <span>
+                        <img src="img/anadolu_lisesi.svg" width="32" height="32" />
+                      </span>
+                      Anadolu Lisesi
+                    </a>
+                    <a href="#" data-type="meslek_lisesi" class="high-school-type">
+                      <span>
+                        <img src="img/meslek_lisesi.svg" width="32" height="32" />
+                      </span>
+                      Meslek Lisesi
+                    </a>
+                    <a href="#" data-type="imam_hatip" class="high-school-type">
+                      <span>
+                        <img src="img/imam_hatip_lisesi.svg" width="32" height="32" />
+                      </span>
+                      İmam Hatip Lisesi
+                    </a>
+                    <a href="#" data-type="lise" class="high-school-type">
+                      <span>
+                        <img src="img/diger_liseler.svg" width="32" height="32" />
+                      </span>
+                      Diğer Liseler
+                    </a>
+                  </div>
+
+                  <div class="show-all-high-schools-container">
+                    <hr class="show-all-high-schools-separator" />
+                    <div class="text-center">
+                      <a href="#" id="show-all-high-schools">Tümünü Göster</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button id="nearHighSchools" class="button button-primary d-none d-lg-block">Yakınımdaki Okulları Bul</button>
+            </div>
+          </div>
+          <div class="credits text-center">
+            <a href="https://twitter.com/alpcanaydin" target="_blank">@alpcanaydin</a>
+            -
+            <a href="https://twitter.com/batuhankrskl" target="_blank">@batuhankrskl</a>
+            <span class="d-none d-lg-inline-block">
+              -
+              <a href="https://github.com/alpcanaydin/liseler" target="_blank">kaynağı görüntüle</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 h-100 p-0 position-relative">
+        <div id="loading">Yükleniyor..</div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO1egUDZrGb2_qzNQQDa9pmIc4GRXQHOM"></script>
+<script>!function(e){function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}var r=window.webpackJsonp;window.webpackJsonp=function(t,a,i){for(var c,u,f,l=0,p=[];l<t.length;l++)u=t[l],o[u]&&p.push(o[u][0]),o[u]=0;for(c in a)Object.prototype.hasOwnProperty.call(a,c)&&(e[c]=a[c]);for(r&&r(t,a,i);p.length;)p.shift()();if(i)for(l=0;l<i.length;l++)f=n(n.s=i[l]);return f};var t={},o={2:0};n.e=function(e){function r(){c.onerror=c.onload=null,clearTimeout(u);var n=o[e];0!==n&&(n&&n[1](new Error("Loading chunk "+e+" failed.")),o[e]=void 0)}var t=o[e];if(0===t)return new Promise(function(e){e()});if(t)return t[2];var a=new Promise(function(n,r){t=o[e]=[n,r]});t[2]=a;var i=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.charset="utf-8",c.async=!0,c.timeout=12e4,n.nc&&c.setAttribute("nonce",n.nc),c.src=n.p+""+({0:"vendor",1:"app"}[e]||e)+"."+{0:"ac8f1ab7",1:"6b965521"}[e]+".js";var u=setTimeout(r,12e4);return c.onerror=c.onload=r,i.appendChild(c),a},n.m=e,n.c=t,n.d=function(e,r,t){n.o(e,r)||Object.defineProperty(e,r,{configurable:!1,enumerable:!0,get:t})},n.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(r,"a",r),r},n.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},n.p="https://alpcanaydin.github.io/liseler/",n.oe=function(e){throw console.error(e),e}}([]);</script>
+<script type="text/javascript" src="https://alpcanaydin.github.io/liseler/vendor.ac8f1ab7.js"></script><script type="text/javascript" src="https://alpcanaydin.github.io/liseler/app.6b965521.js"></script></body>
+
+</html>
