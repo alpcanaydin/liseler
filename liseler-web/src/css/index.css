@@ -17,7 +17,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   background: #ff5a57;
   color: #fff;
