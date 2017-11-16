@@ -24,17 +24,17 @@ export const createMap = domNode => {
 export const getMarkerIcon = type => {
   switch (type) {
     case 'anadolu_lisesi':
-      return '/img/anadolu_lisesi.svg';
+      return 'img/anadolu_lisesi.svg';
     case 'lise':
-      return '/img/diger_liseler.svg';
+      return 'img/diger_liseler.svg';
     case 'fen_lisesi':
-      return '/img/fen_lisesi.svg';
+      return 'img/fen_lisesi.svg';
     case 'imam_hatip':
-      return '/img/imam_hatip_lisesi.svg';
+      return 'img/imam_hatip_lisesi.svg';
     case 'meslek_lisesi':
-      return '/img/meslek_lisesi.svg';
+      return 'img/meslek_lisesi.svg';
     default:
-      return '/img/diger_liseler.svg';
+      return 'img/diger_liseler.svg';
   }
 };
 
