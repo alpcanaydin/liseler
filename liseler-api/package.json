@@ -1,0 +1,33 @@
+{
+  "name": "mahalle-api",
+  "version": "1.0.0",
+  "description": "Mahalle API",
+  "main": "app.js",
+  "repository": "https://github.com/alpcanaydin/mahalle-api",
+  "author": "Alpcan Aydın <alpcan@alpcanaydin.com>",
+  "license": "MIT",
+  "dependencies": {
+    "JSONStream": "^1.3.1",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "iconv-lite": "^0.4.19",
+    "qs": "^6.5.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "nodemon": "^1.12.1",
+    "prettier": "^1.7.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "start:dev": "nodemon -L app.js"
+  }
+}
