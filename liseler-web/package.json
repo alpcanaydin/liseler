@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "nwb build-web-app",
+    "deploy": "yarn run build && gh-pages -d dist",
     "clean": "nwb clean-app",
     "start": "nwb serve-web-app --reload",
     "test": "nwb test",
@@ -20,6 +21,7 @@
     "eslint-config-prettier": "^2.7.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "gh-pages": "^1.0.0",
     "nwb": "0.19.x",
     "prettier": "^1.8.2"
   },
